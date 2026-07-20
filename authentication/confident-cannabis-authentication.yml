@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/confident-cannabis-client-openapi.json, openapi/confident-cannabis-common-openapi.json,
+  openapi/confident-cannabis-lab-openapi.json
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - header
+schemes:
+- name: ApiKeyAuth
+  type: apiKey
+  in: header
+  parameter: X-ConfidentCannabis-APIKey
+  description: API key for authentication. Required for all requests.
+  sources:
+  - openapi/confident-cannabis-client-openapi.json
+  - openapi/confident-cannabis-common-openapi.json
+  - openapi/confident-cannabis-lab-openapi.json
+- name: SignatureAuth
+  type: apiKey
+  in: header
+  parameter: X-ConfidentCannabis-Signature
+  description: HMAC SHA256 signature (required if signing enabled)
+  sources:
+  - openapi/confident-cannabis-lab-openapi.json
+- name: TimestampAuth
+  type: apiKey
+  in: header
+  parameter: X-ConfidentCannabis-Timestamp
+  description: Unix timestamp (required if signing enabled, must be within 30 seconds)
+  sources:
+  - openapi/confident-cannabis-lab-openapi.json
