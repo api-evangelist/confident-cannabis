@@ -1,0 +1,231 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: derived from openapi/ operations
+server:
+  name: confident-cannabis
+  transport: stdio
+  note: No official hosted MCP server published by Confident Cannabis as of 2026-07-18. Confident publishes
+    a custom GPT (https://chatgpt.com/g/g-693b301b5db4819192e5e6aff37bdb37-confident-api-expert) but not
+    an MCP endpoint. Tool list below is a derived candidate wrapping the v0 REST operations.
+tools:
+- name: getClient
+  description: Get current client information
+  source_operation: openapi/confident-cannabis-client-openapi.json#getClient
+  method: GET
+  path: /v0/clients/client
+- name: getClientSampleCategories
+  description: Get all sample categories
+  source_operation: openapi/confident-cannabis-client-openapi.json#getClientSampleCategories
+  method: GET
+  path: /v0/clients/samplecategories
+- name: getClientSampleClassifications
+  description: Get all sample classifications
+  source_operation: openapi/confident-cannabis-client-openapi.json#getClientSampleClassifications
+  method: GET
+  path: /v0/clients/sampleclassifications
+- name: getClientSampleProductionMethods
+  description: Get all sample production methods
+  source_operation: openapi/confident-cannabis-client-openapi.json#getClientSampleProductionMethods
+  method: GET
+  path: /v0/clients/sampleproductionmethods
+- name: getClientSampleTypes
+  description: Get all sample types
+  source_operation: openapi/confident-cannabis-client-openapi.json#getClientSampleTypes
+  method: GET
+  path: /v0/clients/sampletypes
+- name: getLabDetails
+  description: Get lab details
+  source_operation: openapi/confident-cannabis-client-openapi.json#getLabDetails
+  method: GET
+  path: /v0/clients/lab/{lab_id}
+- name: getLabs
+  description: List labs
+  source_operation: openapi/confident-cannabis-client-openapi.json#getLabs
+  method: GET
+  path: /v0/clients/labs
+- name: getOrderDetails
+  description: Get order details
+  source_operation: openapi/confident-cannabis-client-openapi.json#getOrderDetails
+  method: GET
+  path: /v0/clients/order/{order_id}
+- name: getOrders
+  description: List orders
+  source_operation: openapi/confident-cannabis-client-openapi.json#getOrders
+  method: GET
+  path: /v0/clients/orders
+- name: getSampleDetails
+  description: Get sample details
+  source_operation: openapi/confident-cannabis-client-openapi.json#getSampleDetails
+  method: GET
+  path: /v0/clients/sample/{sample_id}
+- name: getSamples
+  description: List samples
+  source_operation: openapi/confident-cannabis-client-openapi.json#getSamples
+  method: GET
+  path: /v0/clients/samples
+- name: getCompounds
+  description: Get all compounds
+  source_operation: openapi/confident-cannabis-common-openapi.json#getCompounds
+  method: GET
+  path: /v0/compounds
+- name: getOrderStatuses
+  description: Get all order statuses
+  source_operation: openapi/confident-cannabis-common-openapi.json#getOrderStatuses
+  method: GET
+  path: /v0/orderstatuses
+- name: getSampleCategories
+  description: Get all sample categories
+  source_operation: openapi/confident-cannabis-common-openapi.json#getSampleCategories
+  method: GET
+  path: /v0/samplecategories
+- name: getSampleClassifications
+  description: Get all sample classifications
+  source_operation: openapi/confident-cannabis-common-openapi.json#getSampleClassifications
+  method: GET
+  path: /v0/sampleclassifications
+- name: getSampleProductionMethods
+  description: Get all sample production methods
+  source_operation: openapi/confident-cannabis-common-openapi.json#getSampleProductionMethods
+  method: GET
+  path: /v0/sampleproductionmethods
+- name: getSampleTypes
+  description: Get all sample types
+  source_operation: openapi/confident-cannabis-common-openapi.json#getSampleTypes
+  method: GET
+  path: /v0/sampletypes
+- name: getTestTypes
+  description: Get all test types
+  source_operation: openapi/confident-cannabis-common-openapi.json#getTestTypes
+  method: GET
+  path: /v0/testtypes
+- name: adjustWeightOnHand
+  description: Adjust weight on hand
+  source_operation: openapi/confident-cannabis-lab-openapi.json#adjustWeightOnHand
+  method: POST
+  path: /v0/labs/sample/{sample_id}/weight_on_hand
+- name: cancelOrder
+  description: Cancel order
+  source_operation: openapi/confident-cannabis-lab-openapi.json#cancelOrder
+  method: POST
+  path: /v0/labs/order/{order_id}/status/cancel
+- name: completeOrder
+  description: Complete order
+  source_operation: openapi/confident-cannabis-lab-openapi.json#completeOrder
+  method: POST
+  path: /v0/labs/order/{order_id}/status/complete
+- name: createClient
+  description: Create client
+  source_operation: openapi/confident-cannabis-lab-openapi.json#createClient
+  method: POST
+  path: /v0/labs/clients
+- name: getClients
+  description: List clients
+  source_operation: openapi/confident-cannabis-lab-openapi.json#getClients
+  method: GET
+  path: /v0/labs/clients
+- name: createOrder
+  description: Create order
+  source_operation: openapi/confident-cannabis-lab-openapi.json#createOrder
+  method: POST
+  path: /v0/labs/order
+- name: editOrder
+  description: Edit order
+  source_operation: openapi/confident-cannabis-lab-openapi.json#editOrder
+  method: PATCH
+  path: /v0/labs/order/{order_id}
+- name: getOrderDetails
+  description: Get order details
+  source_operation: openapi/confident-cannabis-lab-openapi.json#getOrderDetails
+  method: GET
+  path: /v0/labs/order/{order_id}
+- name: editSample
+  description: Edit sample properties
+  source_operation: openapi/confident-cannabis-lab-openapi.json#editSample
+  method: PATCH
+  path: /v0/labs/sample/{sample_id}
+- name: getSampleDetails
+  description: Get sample details
+  source_operation: openapi/confident-cannabis-lab-openapi.json#getSampleDetails
+  method: GET
+  path: /v0/labs/sample/{sample_id}
+- name: getClientDetails
+  description: Get client details
+  source_operation: openapi/confident-cannabis-lab-openapi.json#getClientDetails
+  method: GET
+  path: /v0/labs/client/{client_id}
+- name: getLab
+  description: Get lab information
+  source_operation: openapi/confident-cannabis-lab-openapi.json#getLab
+  method: GET
+  path: /v0/labs/lab
+- name: getLabCompounds
+  description: Get compounds
+  source_operation: openapi/confident-cannabis-lab-openapi.json#getLabCompounds
+  method: GET
+  path: /v0/labs/compounds
+- name: getLabTestTypes
+  description: Get test types
+  source_operation: openapi/confident-cannabis-lab-openapi.json#getLabTestTypes
+  method: GET
+  path: /v0/labs/testtypes
+- name: getOrders
+  description: List orders
+  source_operation: openapi/confident-cannabis-lab-openapi.json#getOrders
+  method: GET
+  path: /v0/labs/orders
+- name: getSamples
+  description: List samples
+  source_operation: openapi/confident-cannabis-lab-openapi.json#getSamples
+  method: GET
+  path: /v0/labs/samples
+- name: getTestPackages
+  description: Get test packages
+  source_operation: openapi/confident-cannabis-lab-openapi.json#getTestPackages
+  method: GET
+  path: /v0/labs/testpackages
+- name: inviteUserToClient
+  description: Invite user to client
+  source_operation: openapi/confident-cannabis-lab-openapi.json#inviteUserToClient
+  method: POST
+  path: /v0/labs/client/{client_id}/invite
+- name: reviseOrder
+  description: Revise order
+  source_operation: openapi/confident-cannabis-lab-openapi.json#reviseOrder
+  method: POST
+  path: /v0/labs/order/{order_id}/status/revise
+- name: submitTestResults
+  description: Submit test results
+  source_operation: openapi/confident-cannabis-lab-openapi.json#submitTestResults
+  method: POST
+  path: /v0/labs/sample/{sample_id}/test_results
+- name: uncancelOrder
+  description: Uncancel order
+  source_operation: openapi/confident-cannabis-lab-openapi.json#uncancelOrder
+  method: POST
+  path: /v0/labs/order/{order_id}/status/uncancel
+- name: unverifyOrder
+  description: Unverify order
+  source_operation: openapi/confident-cannabis-lab-openapi.json#unverifyOrder
+  method: POST
+  path: /v0/labs/order/{order_id}/status/unverify
+- name: uploadOrderDocument
+  description: Upload order document
+  source_operation: openapi/confident-cannabis-lab-openapi.json#uploadOrderDocument
+  method: POST
+  path: /v0/labs/order/{order_id}/document
+- name: uploadSampleCOA
+  description: Upload Certificate of Analysis
+  source_operation: openapi/confident-cannabis-lab-openapi.json#uploadSampleCOA
+  method: POST
+  path: /v0/labs/sample/{sample_id}/coa
+- name: uploadSampleCOAAddition
+  description: Upload CoA addition file
+  source_operation: openapi/confident-cannabis-lab-openapi.json#uploadSampleCOAAddition
+  method: POST
+  path: /v0/labs/sample/{sample_id}/coa_addition
+- name: verifyOrder
+  description: Verify order
+  source_operation: openapi/confident-cannabis-lab-openapi.json#verifyOrder
+  method: POST
+  path: /v0/labs/order/{order_id}/status/verify

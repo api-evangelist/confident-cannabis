@@ -1,0 +1,55 @@
+generated: '2026-07-18'
+method: derived
+source: derived from openapi/ 4xx/5xx responses
+format: custom
+envelope:
+  schema:
+    success: boolean (false on error)
+    error_code: string
+    error_message: string
+    error_details: object (optional)
+  note: Confident Cannabis returns a custom JSON error envelope, NOT RFC 9457 application/problem+json.
+    Content-Type is application/json.
+problems:
+- status: 400
+  title: Invalid request
+  envelope_field: error_code
+  example_operations:
+  - openapi/confident-cannabis-client-openapi.json#getLabs
+  - openapi/confident-cannabis-client-openapi.json#getOrders
+  - openapi/confident-cannabis-client-openapi.json#getSamples
+- status: 401
+  title: Authentication failed
+  envelope_field: error_code
+  example_operations:
+  - openapi/confident-cannabis-client-openapi.json#getClient
+  - openapi/confident-cannabis-client-openapi.json#getClientSampleCategories
+  - openapi/confident-cannabis-client-openapi.json#getClientSampleClassifications
+- status: 401
+  title: Authentication failed - missing or invalid API key, signature, or timestamp
+  envelope_field: error_code
+  example_operations:
+  - openapi/confident-cannabis-common-openapi.json#getCompounds
+  - openapi/confident-cannabis-common-openapi.json#getOrderStatuses
+  - openapi/confident-cannabis-common-openapi.json#getSampleCategories
+- status: 403
+  title: Access denied
+  envelope_field: error_code
+  example_operations:
+  - openapi/confident-cannabis-client-openapi.json#getClient
+  - openapi/confident-cannabis-client-openapi.json#getClientSampleCategories
+  - openapi/confident-cannabis-client-openapi.json#getClientSampleClassifications
+- status: 403
+  title: Access denied - insufficient permissions
+  envelope_field: error_code
+  example_operations:
+  - openapi/confident-cannabis-common-openapi.json#getCompounds
+  - openapi/confident-cannabis-common-openapi.json#getOrderStatuses
+  - openapi/confident-cannabis-common-openapi.json#getSampleCategories
+- status: 404
+  title: Resource not found
+  envelope_field: error_code
+  example_operations:
+  - openapi/confident-cannabis-client-openapi.json#getLabDetails
+  - openapi/confident-cannabis-client-openapi.json#getOrderDetails
+  - openapi/confident-cannabis-client-openapi.json#getSampleDetails

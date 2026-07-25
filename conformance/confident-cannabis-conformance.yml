@@ -1,0 +1,42 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.confidentlims.com/ai-info
+docs: https://www.confidentlims.com/ai-info
+standards:
+  - id: iso-17025
+    conforms: true
+    kind: compliance-program
+    evidence: >-
+      Confident LIMS publishes a Statement of Compliance with ISO/IEC 17025
+      (testing/calibration laboratory competence).
+    url: https://confidentlims.notion.site/Statement-of-Compliance-with-ISO-17025-27717bf1b54a80f38545f89f696341d0
+  - id: soc-2
+    conforms: true
+    kind: compliance-program
+    evidence: SOC 2 Type 1 and Type 2 Readiness Assessment of Compliance published.
+    url: https://confidentlims.notion.site/SOC-2-Type-1-and-Type-2-Readiness-Assessment-of-Compliance-27817bf1b54a80038215daa145556e51
+  - id: fda-21-cfr-part-11
+    conforms: true
+    kind: compliance-program
+    evidence: FDA 21 CFR Part 11 Self-Attestation of Compliance published (electronic records/signatures).
+    url: https://confidentlims.notion.site/FDA-21-CFR-Part-11-Self-Attestation-of-Compliance-27817bf1b54a80f6abbbcdb143ca7135
+  - id: tni-nelap
+    conforms: true
+    kind: industry-standard
+    evidence: TNI/NELAP support cited on the company AI info page and marketing site.
+  - id: oauth2
+    conforms: false
+    evidence: API uses static API-key auth with optional HMAC request signing, not OAuth2.
+  - id: openidconnect
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: >-
+      Errors use a custom {success,error_code,error_message,error_details} JSON
+      envelope, not application/problem+json.
+  - id: rfc8594-sunset
+    conforms: false
+    evidence: No Sunset/Deprecation header support documented.
+  - id: pagination-offset
+    conforms: true
+    evidence: start/limit offset pagination with a more_results boolean across list endpoints.

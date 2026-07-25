@@ -1,26 +1,205 @@
 aid: confident-cannabis
 name: Confident Cannabis
-description: Confident Cannabis is a company surfaced as a portfolio company of bullpen-capital and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Confident Cannabis (CC Software LLC, operating as Confident LIMS) is a
+  cloud-based Laboratory Information Management System for analytical testing
+  labs and their clients across cannabis and hemp, food and beverage,
+  environmental, agriculture, nutraceuticals, cosmetics, oil and gas, and
+  industrial chemical testing. Its public v0 REST API lets labs manage samples,
+  orders, and the order-status lifecycle, submit per-compound test results, and
+  upload Certificates of Analysis, while testing clients read their labs,
+  orders, samples, and results. Authentication is API-key based with optional
+  HMAC-SHA256 request signing. Founded 2015 and backed by Bullpen Capital, the
+  platform serves 100+ labs and 15,000+ active testing clients.
 url: https://raw.githubusercontent.com/api-evangelist/confident-cannabis/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - bullpen-capital
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: public-api-found
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://cdn.prod.website-files.com/64d6509bb299ffdf28c03cc4/65005f8fc24b671e1c5f5e68_webclip.jpg
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
-apis: []
+- Cannabis
+- Laboratory
+- LIMS
+- Testing
+- Compliance
+- Certificate of Analysis
+- Life Sciences
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: confident-cannabis:confident-cannabis-client-info-api
+  name: Confident Cannabis Client Info API
+  description: Client organization information
+  humanURL: https://confidentlims.readme.io/reference
+  baseURL: https://api.confidentcannabis.com
+  tags:
+  - Client Info
+  properties:
+  - type: OpenAPI
+    url: openapi/confident-cannabis-client-info-api-openapi.yml
+- aid: confident-cannabis:confident-cannabis-clients-api
+  name: Confident Cannabis Clients API
+  description: Client relationship management
+  humanURL: https://confidentlims.readme.io/reference
+  baseURL: https://api.confidentcannabis.com
+  tags:
+  - Clients
+  properties:
+  - type: OpenAPI
+    url: openapi/confident-cannabis-clients-api-openapi.yml
+- aid: confident-cannabis:confident-cannabis-lab-info-api
+  name: Confident Cannabis Lab Info API
+  description: The Lab Info API from Confident Cannabis — 1 operation(s) for lab info.
+  humanURL: https://confidentlims.readme.io/reference
+  baseURL: https://api.confidentcannabis.com
+  tags:
+  - Lab Info
+  properties:
+  - type: OpenAPI
+    url: openapi/confident-cannabis-lab-info-api-openapi.yml
+- aid: confident-cannabis:confident-cannabis-labs-api
+  name: Confident Cannabis Labs API
+  description: View associated labs
+  humanURL: https://confidentlims.readme.io/reference
+  baseURL: https://api.confidentcannabis.com
+  tags:
+  - Labs
+  properties:
+  - type: OpenAPI
+    url: openapi/confident-cannabis-labs-api-openapi.yml
+- aid: confident-cannabis:confident-cannabis-order-status-api
+  name: Confident Cannabis Order Status API
+  description: Order lifecycle state transitions
+  humanURL: https://confidentlims.readme.io/reference
+  baseURL: https://api.confidentcannabis.com
+  tags:
+  - Order Status
+  properties:
+  - type: OpenAPI
+    url: openapi/confident-cannabis-order-status-api-openapi.yml
+- aid: confident-cannabis:confident-cannabis-orders-api
+  name: Confident Cannabis Orders API
+  description: View orders and order details
+  humanURL: https://confidentlims.readme.io/reference
+  baseURL: https://api.confidentcannabis.com
+  tags:
+  - Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/confident-cannabis-orders-api-openapi.yml
+- aid: confident-cannabis:confident-cannabis-reference-data-api
+  name: Confident Cannabis Reference Data API
+  description: Reference data for sample metadata
+  humanURL: https://confidentlims.readme.io/reference
+  baseURL: https://api.confidentcannabis.com
+  tags:
+  - Reference Data
+  properties:
+  - type: OpenAPI
+    url: openapi/confident-cannabis-reference-data-api-openapi.yml
+- aid: confident-cannabis:confident-cannabis-sample-files-api
+  name: Confident Cannabis Sample Files API
+  description: Upload sample images and documents
+  humanURL: https://confidentlims.readme.io/reference
+  baseURL: https://api.confidentcannabis.com
+  tags:
+  - Sample Files
+  properties:
+  - type: OpenAPI
+    url: openapi/confident-cannabis-sample-files-api-openapi.yml
+- aid: confident-cannabis:confident-cannabis-samples-api
+  name: Confident Cannabis Samples API
+  description: View samples and test results
+  humanURL: https://confidentlims.readme.io/reference
+  baseURL: https://api.confidentcannabis.com
+  tags:
+  - Samples
+  properties:
+  - type: OpenAPI
+    url: openapi/confident-cannabis-samples-api-openapi.yml
+- aid: confident-cannabis:confident-cannabis-test-results-api
+  name: Confident Cannabis Test Results API
+  description: Submit and manage test results
+  humanURL: https://confidentlims.readme.io/reference
+  baseURL: https://api.confidentcannabis.com
+  tags:
+  - Test Results
+  properties:
+  - type: OpenAPI
+    url: openapi/confident-cannabis-test-results-api-openapi.yml
 common:
 - type: Website
-  url: https://confidentcannabis.com
+  url: https://www.confidentlims.com
+- type: DeveloperPortal
+  url: https://confidentlims.readme.io/
+- type: Documentation
+  url: https://confidentlims.readme.io/
+- type: APIReference
+  url: https://confidentlims.readme.io/reference
+- type: Authentication
+  url: authentication/confident-cannabis-authentication.yml
+- type: DomainSecurity
+  url: security/confident-cannabis-domain-security.yml
+- type: ErrorCatalog
+  url: errors/confident-cannabis-problem-types.yml
+- type: Conventions
+  url: conventions/confident-cannabis-conventions.yml
+- type: Lifecycle
+  url: lifecycle/confident-cannabis-lifecycle.yml
+- type: DataModel
+  url: data-model/confident-cannabis-data-model.yml
+- type: Conformance
+  url: conformance/confident-cannabis-conformance.yml
+- type: Compliance
+  url: https://www.confidentlims.com/ai-info
+- type: WellKnown
+  url: well-known/confident-cannabis-well-known.yml
+- type: MCPServer
+  url: mcp/confident-cannabis-mcp.yml
+- type: LLMsTxt
+  url: llms/confident-cannabis-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+- type: GitHubOrganization
+  url: https://github.com/ConfidentCannabis
+- type: Blog
+  url: https://www.confidentlims.com/blog
+- type: Support
+  url: https://help.confidentlims.com/
+- type: Pricing
+  url: https://www.confidentlims.com/pricing
+- type: SignUp
+  url: https://accounts.confidentlims.com/register
+- type: Login
+  url: https://accounts.confidentlims.com/login
+- type: TermsOfService
+  url: https://www.confidentlims.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.confidentlims.com/privacy
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

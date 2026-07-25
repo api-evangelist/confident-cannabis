@@ -1,0 +1,69 @@
+generated: '2026-07-18'
+method: searched
+source: https://confidentlims.readme.io/reference
+docs: https://confidentlims.readme.io/
+summary: >-
+  Cross-cutting request/response semantics for the Confident Cannabis v0 API,
+  derived from the reconstructed OpenAPI (openapi/) and the ReadMe API reference.
+authentication:
+  style: api-key + optional HMAC request signing
+  api_key_header: X-ConfidentCannabis-APIKey
+  signing:
+    header_signature: X-ConfidentCannabis-Signature
+    header_timestamp: X-ConfidentCannabis-Timestamp
+    algorithm: HMAC-SHA256
+    signature_format: 'CC0-HMAC-SHA256:x-confidentcannabis-timestamp:<hash>'
+    timestamp_window_seconds: 30
+    encoding_note: >-
+      Custom percent-encoding where spaces are encoded as '+'. File-upload fields
+      (COA / images / order documents) are EXCLUDED from signature generation.
+    reference_tools: https://github.com/ConfidentCannabis/public-api-tools
+    ref: authentication/confident-cannabis-authentication.yml
+pagination:
+  style: offset
+  request_params:
+    start: Pagination offset (integer, default 0)
+    limit: Maximum records to return (integer, default 100, max 100)
+  response_fields:
+    more_results: boolean flag indicating additional pages are available
+  applies_to:
+    - getSamples
+    - getOrders
+    - getClients
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key header or parameter is documented in the API reference or
+    reconstructed OpenAPI. Order-status transitions are modeled as explicit,
+    reversible state-change operations (verify/unverify, cancel/uncancel,
+    complete/revise) rather than idempotent writes.
+error_envelope:
+  content_type: application/json
+  format: custom
+  shape:
+    success: boolean (false on error)
+    error_code: string
+    error_message: string
+    error_details: object (optional)
+  note: Not RFC 9457. See errors/confident-cannabis-problem-types.yml
+  ref: errors/confident-cannabis-problem-types.yml
+versioning:
+  scheme: uri-path
+  current: v0
+  spec_version: 0.16.0
+  ref: lifecycle/confident-cannabis-lifecycle.yml
+rate_limiting:
+  documented: false
+  note: >-
+    No published rate-limit headers or quotas found in the public API reference
+    as of 2026-07-18. ReadMe-hosted docs pages themselves rate-limit (HTTP 429).
+file_uploads:
+  content_type: multipart/form-data
+  operations:
+    - uploadSampleImage (jpg/jpeg/png/gif/bmp)
+    - uploadSampleCOA (pdf only)
+    - uploadSampleCOAAddition (pdf/jpg/jpeg/png/gif/bmp)
+    - uploadOrderDocument (csv/pdf/png/jpg/txt/...)
+  constraint: >-
+    File uploads permitted only while the order is In Progress (status_id 3);
+    file fields are excluded from HMAC signature generation.

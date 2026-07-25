@@ -1,0 +1,32 @@
+{
+  "provider": "confident-cannabis",
+  "sources": [
+    "confident-cannabis-client-info-api-openapi.yml",
+    "confident-cannabis-clients-api-openapi.yml",
+    "confident-cannabis-lab-info-api-openapi.yml",
+    "confident-cannabis-labs-api-openapi.yml",
+    "confident-cannabis-order-status-api-openapi.yml",
+    "confident-cannabis-orders-api-openapi.yml",
+    "confident-cannabis-reference-data-api-openapi.yml",
+    "confident-cannabis-sample-files-api-openapi.yml",
+    "confident-cannabis-samples-api-openapi.yml",
+    "confident-cannabis-test-results-api-openapi.yml"
+  ],
+  "outputs": [
+    "confident-cannabis-client-info-api-openapi.yml",
+    "confident-cannabis-clients-api-openapi.yml",
+    "confident-cannabis-lab-info-api-openapi.yml",
+    "confident-cannabis-labs-api-openapi.yml",
+    "confident-cannabis-order-status-api-openapi.yml",
+    "confident-cannabis-orders-api-openapi.yml",
+    "confident-cannabis-reference-data-api-openapi.yml",
+    "confident-cannabis-sample-files-api-openapi.yml",
+    "confident-cannabis-samples-api-openapi.yml",
+    "confident-cannabis-test-results-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

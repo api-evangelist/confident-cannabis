@@ -1,0 +1,18 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Common
+  version: 1.0.0
+extends: openapi/confident-cannabis-common-openapi.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-enriched: '2026-07-18'
+    x-apievangelist-notes: Spec reconstructed by API Evangelist from Confident Cannabis ReadMe per-operation
+      OpenAPI fragments (confidentlims.readme.io). Authoritative source is the provider docs.
+- target: $.info
+  update:
+    x-artifact-pointers:
+      authentication: authentication/confident-cannabis-authentication.yml
+      errors: errors/confident-cannabis-problem-types.yml
+      conventions: conventions/confident-cannabis-conventions.yml
+      data-model: data-model/confident-cannabis-data-model.yml

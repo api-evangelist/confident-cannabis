@@ -1,0 +1,26 @@
+generated: '2026-07-18'
+method: searched
+source: https://confidentlims.readme.io/reference
+versioning:
+  scheme: uri-path
+  current: v0
+  spec_version: 0.16.0
+  docs: https://confidentlims.readme.io/reference
+  note: >-
+    All operations are served under the /v0/ path prefix. The reconstructed
+    OpenAPI reports info.version 0.16.0 for the Lab, Clients, and Common surfaces.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: >-
+    No formal deprecation policy or RFC 8594 Sunset/Deprecation header support
+    found in the public API reference as of 2026-07-18. A separate legacy docs
+    surface (https://api.confidentcannabis.com/docs, auth-required) predates the
+    current ReadMe reference.
+sla:
+  url: null
+  uptime_target: null
+status_page: null
+status_page_note: >-
+  No public status page discovered (status.confidentlims.com does not resolve).
+deprecated_operations: []

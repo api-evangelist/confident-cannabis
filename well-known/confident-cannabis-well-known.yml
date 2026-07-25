@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+source: live probe of /.well-known/ on API and account hosts
+note: >-
+  No .well-known discovery documents were served. accounts.confidentlims.com
+  returns HTTP 200 for arbitrary paths (SPA catch-all serving index HTML), so its
+  200 on /.well-known/openid-configuration is NOT a real OIDC document and was
+  discarded. The Confident Cannabis API uses static API-key auth, not OIDC/OAuth.
+hosts:
+  - host: https://api.confidentcannabis.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+  - host: https://confidentlims.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+  - host: https://accounts.confidentlims.com
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        discarded: true
+        reason: SPA catch-all HTML, not a valid OIDC discovery document

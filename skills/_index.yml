@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: generated
+source: grounded in openapi/ operationIds (Lab + Clients surfaces)
+skills:
+  - file: confident-cannabis-submit-lab-results.md
+    name: Submit lab test results on Confident Cannabis
+    api: openapi/confident-cannabis-lab-openapi.json
+    operations: [createOrder, verifyOrder, submitTestResults, uploadSampleCOA, completeOrder]
+  - file: confident-cannabis-order-lifecycle.md
+    name: Manage the Confident Cannabis order status lifecycle
+    api: openapi/confident-cannabis-lab-openapi.json
+    operations: [getOrderStatuses, verifyOrder, unverifyOrder, completeOrder, reviseOrder, cancelOrder, uncancelOrder]
+  - file: confident-cannabis-client-retrieve-results.md
+    name: Retrieve test orders and results as a Confident Cannabis client
+    api: openapi/confident-cannabis-client-openapi.json
+    operations: [getClient, getLabs, getOrders, getSamples, getSampleDetails]

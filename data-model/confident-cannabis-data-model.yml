@@ -1,0 +1,94 @@
+generated: '2026-07-18'
+method: derived
+source: >-
+  derived from openapi/ path structure, id-reference fields, and list/detail
+  response schemas (Lab, Clients, Common surfaces)
+identifiers:
+  sample:
+    - lab_internal_id
+    - public_key
+    - regulator_id_to_attach
+  order: order_id
+  client: client_id
+  lab: lab_id
+  status: status_id
+entities:
+  - name: Lab
+    description: An analytical testing laboratory organization (authenticated party for lab endpoints).
+    operations: [getLab]
+  - name: Client
+    description: A testing client (producer/brand) that submits samples to a lab.
+    operations: [getClient, getClients, getClientDetails, createClient, inviteUserToClient]
+  - name: Order
+    description: A test order containing one or more samples, moving through a status lifecycle.
+    operations: [getOrders, getOrderDetails, createOrder, editOrder, verifyOrder, unverifyOrder, completeOrder, reviseOrder, cancelOrder, uncancelOrder, uploadOrderDocument]
+  - name: Sample
+    description: A physical sample submitted for testing.
+    operations: [getSamples, getSampleDetails, editSample, adjustWeightOnHand, uploadSampleImage, uploadSampleCOA, uploadSampleCOAAddition, submitTestResults]
+  - name: TestResult
+    description: Analytical results for a sample, organized by category (cannabinoids, terpenes, pesticides, ...) with per-compound values.
+    operations: [submitTestResults]
+  - name: TestType
+    description: An available test/assay type.
+    operations: [getTestTypes, getLabTestTypes]
+  - name: TestPackage
+    description: A lab-configured bundle of test types offered to clients.
+    operations: [getTestPackages]
+  - name: Compound
+    description: An analyte/compound (with synonyms) usable in test-result submission.
+    operations: [getCompounds, getLabCompounds]
+  - name: OrderStatus
+    description: Reference list of order statuses (1 Placed, 3 In Progress, 4 Completed, 5 Canceled).
+    operations: [getOrderStatuses]
+  - name: SampleType
+    operations: [getSampleTypes, getClientSampleTypes]
+  - name: SampleCategory
+    operations: [getSampleCategories, getClientSampleCategories]
+  - name: SampleClassification
+    description: Indica / Sativa / Hybrid, etc.
+    operations: [getSampleClassifications, getClientSampleClassifications]
+  - name: SampleProductionMethod
+    operations: [getSampleProductionMethods, getClientSampleProductionMethods]
+relationships:
+  - from: Lab
+    to: Client
+    type: has_many
+    via: client_id
+  - from: Client
+    to: Lab
+    type: belongs_to
+    via: lab_id
+  - from: Order
+    to: Sample
+    type: has_many
+  - from: Order
+    to: Client
+    type: belongs_to
+    via: client_id
+  - from: Order
+    to: OrderStatus
+    type: has_one
+    via: status_id
+  - from: Sample
+    to: Order
+    type: belongs_to
+    via: order_id
+  - from: Sample
+    to: TestResult
+    type: has_many
+  - from: Sample
+    to: SampleType
+    type: has_one
+  - from: Sample
+    to: SampleClassification
+    type: has_one
+  - from: TestResult
+    to: Compound
+    type: has_many
+    via: name
+  - from: TestResult
+    to: TestType
+    type: belongs_to
+  - from: TestPackage
+    to: TestType
+    type: has_many
