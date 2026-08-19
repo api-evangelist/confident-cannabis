@@ -1,0 +1,2077 @@
+{
+  "item": [
+    {
+      "id": "71525790-5d87-447a-a8ba-ff904d874516",
+      "name": "Samples",
+      "description": {
+        "content": "View samples and test results",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "1f06dc73-57c7-4844-a91d-90fa7224936f",
+          "name": "Get sample details",
+          "request": {
+            "name": "Get sample details",
+            "description": {
+              "content": "Returns detailed information about a specific sample including test results. Sample ID can be lab_internal_id, public_key, or regulator_id_to_attach.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v0",
+                "clients",
+                "sample",
+                ":sample_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sample_id",
+                  "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-ConfidentCannabis-APIKey"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "4e936eb2-aacf-42e3-b357-4cd598131814",
+              "name": "Successful response with sample details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "clients",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"sample\": {\n    \"lab_internal_id\": \"SAMP-2025-001\",\n    \"public_key\": \"abc123def456\",\n    \"name\": \"OG Kush - Batch 42\",\n    \"sample_type\": \"Flower\",\n    \"status_id\": 3,\n    \"status_name\": \"In Progress\",\n    \"date_created\": \"2025-01-10T09:00:00Z\",\n    \"last_modified\": \"2025-01-12T14:30:00Z\",\n    \"regulator_batch_id\": \"BATCH-42\",\n    \"harvest_id\": \"HARVEST-2025-01\",\n    \"test_results\": {\n      \"key_0\": {},\n      \"key_1\": {}\n    },\n    \"images\": [\n      {\n        \"url\": \"https://mKpxSzHpFmVPneXXUMGjSIMqxgPk.svobPgpn5UKifgyuppUNiFRKqajax\",\n        \"type\": \"string\"\n      },\n      {\n        \"url\": \"https://MngfFLajZQ.mclmtmfKAxtDktS3Lp5pnMQInkWfeJOJYyhWly5fIC3y+0HitAbv17zZ\",\n        \"type\": \"string\"\n      }\n    ],\n    \"coa_url\": \"http://xGnQFfLerUAsQJUoRzeUDXXiFk.odObsQGnMVF8v6X6oNf35TgrQ6RCw-wtNXN7FvqnFBSyE5QF\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "310d28c7-b8f4-4f11-9989-1e0e05c4a60f",
+              "name": "Authentication failed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "clients",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"missing_api_key\",\n  \"error_message\": \"Missing API key header\",\n  \"error_details\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3a4fb777-81ca-469c-84aa-f38f8ae21201",
+              "name": "Access denied",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "clients",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"permission_denied\",\n  \"error_message\": \"Access denied\",\n  \"error_details\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7c2d3343-8e3d-415d-873e-4064c08ba932",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "clients",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"not_found\",\n  \"error_message\": \"Resource not found\",\n  \"error_details\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "8b450e0c-1889-4277-a88d-85b7c4a92995",
+          "name": "List samples",
+          "request": {
+            "name": "List samples",
+            "description": {
+              "content": "Returns a paginated list of samples for the authenticated client. Supports filtering by status, batch ID, harvest ID, and modification time.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v0",
+                "clients",
+                "samples"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "start",
+                  "value": "0",
+                  "description": "Pagination offset (number of records to skip)"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "100",
+                  "description": "Maximum number of records to return (max 100)"
+                },
+                {
+                  "disabled": false,
+                  "key": "status_id",
+                  "value": "<integer>",
+                  "description": "Filter by order status ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "modified_since_time",
+                  "value": "<dateTime>",
+                  "description": "Filter samples modified since this timestamp"
+                },
+                {
+                  "disabled": false,
+                  "key": "regulator_batch_id",
+                  "value": "<string>",
+                  "description": "Filter by regulator batch ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "harvest_id",
+                  "value": "<string>",
+                  "description": "Filter by harvest ID"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "key",
+                  "value": "X-ConfidentCannabis-APIKey"
+                },
+                {
+                  "key": "value",
+                  "value": "{{apiKey}}"
+                },
+                {
+                  "key": "in",
+                  "value": "header"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "630416a6-9c18-451c-8a53-07747f3a1a6a",
+              "name": "Successful response with list of samples",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "clients",
+                    "samples"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "0"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "status_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "modified_since_time",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "regulator_batch_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "harvest_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"samples\": [\n    {\n      \"lab_internal_id\": \"SAMP-2025-001\",\n      \"public_key\": \"abc123def456\",\n      \"name\": \"OG Kush - Batch 42\",\n      \"sample_type\": \"Flower\",\n      \"regulator_batch_id\": \"BATCH-42\",\n      \"harvest_id\": \"HARVEST-2025-01\",\n      \"status_id\": 3,\n      \"status_name\": \"In Progress\",\n      \"date_created\": \"2025-01-10T09:00:00Z\",\n      \"last_modified\": \"2025-01-12T14:30:00Z\"\n    }\n  ],\n  \"more_results\": false\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c209eb53-6644-492a-913d-1f8204758300",
+              "name": "Invalid request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "clients",
+                    "samples"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "0"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "status_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "modified_since_time",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "regulator_batch_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "harvest_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"invalid_request\",\n  \"error_message\": \"Invalid request parameters\",\n  \"error_details\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "84381b57-f8c3-4f3c-920d-1964494304c1",
+              "name": "Authentication failed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "clients",
+                    "samples"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "0"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "status_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "modified_since_time",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "regulator_batch_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "harvest_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"missing_api_key\",\n  \"error_message\": \"Missing API key header\",\n  \"error_details\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ],\n    \"key_1\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c58316db-552f-47a6-b1ed-c58e291afdcf",
+              "name": "Access denied",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "clients",
+                    "samples"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "0"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "status_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "modified_since_time",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "regulator_batch_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "harvest_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"permission_denied\",\n  \"error_message\": \"Access denied\",\n  \"error_details\": {\n    \"key_0\": [\n      \"string\",\n      \"string\"\n    ]\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5a305a05-0598-4272-bd80-4bd596e2a2ba",
+          "name": "Adjust weight on hand",
+          "request": {
+            "name": "Adjust weight on hand",
+            "description": {
+              "content": "Adjusts the weight on hand for a sample with a reason code.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v0",
+                "labs",
+                "sample",
+                ":sample_id",
+                "weight_on_hand"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sample_id",
+                  "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"weight_change\": \"<string>\",\n  \"units\": \"<string>\",\n  \"change_reason\": \"<integer>\",\n  \"notes\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2677cc12-a215-46b6-81d1-9bcf8b2799b1",
+              "name": "Weight adjusted successfully",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id",
+                    "weight_on_hand"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"weight_change\": \"-2.5\",\n  \"units\": \"g\",\n  \"change_reason\": 3,\n  \"notes\": \"Used for additional testing\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c196b4e4-116f-4b3f-b593-845f3197deb7",
+              "name": "Invalid request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id",
+                    "weight_on_hand"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"weight_change\": \"-2.5\",\n  \"units\": \"g\",\n  \"change_reason\": 3,\n  \"notes\": \"Used for additional testing\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e2fb6175-42d0-4d70-b12d-8243e999f530",
+              "name": "Authentication failed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id",
+                    "weight_on_hand"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"weight_change\": \"-2.5\",\n  \"units\": \"g\",\n  \"change_reason\": 3,\n  \"notes\": \"Used for additional testing\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f8be0ae6-ad33-48dc-ab8e-7bcfc45d62e2",
+              "name": "Access denied",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id",
+                    "weight_on_hand"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"weight_change\": \"-2.5\",\n  \"units\": \"g\",\n  \"change_reason\": 3,\n  \"notes\": \"Used for additional testing\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "341126d3-4874-4a48-b11e-1bdb0c7ca351",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id",
+                    "weight_on_hand"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"weight_change\": \"-2.5\",\n  \"units\": \"g\",\n  \"change_reason\": 3,\n  \"notes\": \"Used for additional testing\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a8f0386d-8813-44f3-b694-228696d08b78",
+          "name": "Edit sample properties",
+          "request": {
+            "name": "Edit sample properties",
+            "description": {
+              "content": "Updates editable properties of a sample such as name, strain, batch ID, harvest ID, etc.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v0",
+                "labs",
+                "sample",
+                ":sample_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sample_id",
+                  "description": "(Required) Sample identifier (lab_internal_id)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"strain\": \"<string>\",\n  \"regulator_batch_id\": \"<string>\",\n  \"harvest_id\": \"<string>\",\n  \"sample_classification_id\": \"<integer>\",\n  \"sample_production_method_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "8db274e1-b12f-4bf8-b28e-374c3b83f3af",
+              "name": "Successful edit",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"OG Kush - Updated Name\",\n  \"regulator_batch_id\": \"BATCH-42-UPDATED\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"sample\": {\n    \"lab_internal_id\": \"string\",\n    \"public_key\": \"string\",\n    \"name\": \"string\",\n    \"sample_type\": \"string\",\n    \"status_id\": 2571,\n    \"status_name\": \"string\",\n    \"date_created\": \"2020-01-05T14:00:36.939Z\",\n    \"last_modified\": \"1952-09-08T01:53:16.852Z\",\n    \"regulator_batch_id\": \"string\",\n    \"harvest_id\": \"string\",\n    \"sample_classification\": \"string\",\n    \"strain\": \"string\",\n    \"test_results\": {},\n    \"coa_url\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d65c0f0f-e7f2-4aed-89a1-6135b1c3d75d",
+              "name": "Invalid request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"OG Kush - Updated Name\",\n  \"regulator_batch_id\": \"BATCH-42-UPDATED\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6dcfe74b-a58b-4c33-b310-4747ac455b51",
+              "name": "Authentication failed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"OG Kush - Updated Name\",\n  \"regulator_batch_id\": \"BATCH-42-UPDATED\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "fe538576-7532-46d2-939b-99be16ad50dd",
+              "name": "Access denied",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"OG Kush - Updated Name\",\n  \"regulator_batch_id\": \"BATCH-42-UPDATED\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "79d662f1-e726-483e-ae4e-2a89423927ac",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"OG Kush - Updated Name\",\n  \"regulator_batch_id\": \"BATCH-42-UPDATED\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "fd48adc9-98e5-4bb8-b965-90bd96a94a45",
+          "name": "Get sample details",
+          "request": {
+            "name": "Get sample details",
+            "description": {
+              "content": "Returns detailed information about a specific sample. Sample ID can be lab_internal_id, public_key, or regulator_id_to_attach.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v0",
+                "labs",
+                "sample",
+                ":sample_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "sample_id",
+                  "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "20b6d1db-3716-4182-a341-4743e443e260",
+              "name": "Successful response with sample details",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"sample\": {\n    \"lab_internal_id\": \"string\",\n    \"public_key\": \"string\",\n    \"name\": \"string\",\n    \"sample_type\": \"string\",\n    \"status_id\": 2571,\n    \"status_name\": \"string\",\n    \"date_created\": \"2020-01-05T14:00:36.939Z\",\n    \"last_modified\": \"1952-09-08T01:53:16.852Z\",\n    \"regulator_batch_id\": \"string\",\n    \"harvest_id\": \"string\",\n    \"sample_classification\": \"string\",\n    \"strain\": \"string\",\n    \"test_results\": {},\n    \"coa_url\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "70449b4a-fa1f-4d7e-a8f5-242a369fad8d",
+              "name": "Authentication failed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "00b665ed-00b1-44b5-9350-a04d6402d610",
+              "name": "Access denied",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a287f286-736e-457c-b542-e18a59cb6f54",
+              "name": "Resource not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "sample",
+                    ":sample_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "sample_id",
+                      "description": "(Required) Sample identifier (lab_internal_id, public_key, or regulator_id_to_attach)"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "79174bb2-f163-4168-88ae-2ed5f571e505",
+          "name": "List samples",
+          "request": {
+            "name": "List samples",
+            "description": {
+              "content": "Returns a paginated list of samples for the authenticated lab. Supports filtering by status, client, batch ID, harvest ID, and modification time.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "v0",
+                "labs",
+                "samples"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "start",
+                  "value": "0",
+                  "description": "Pagination offset"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "100",
+                  "description": "Maximum records to return (max 100)"
+                },
+                {
+                  "disabled": false,
+                  "key": "status_id",
+                  "value": "<integer>",
+                  "description": "Filter by order status ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "client_id",
+                  "value": "<integer>",
+                  "description": "Filter by client ID"
+                },
+                {
+                  "disabled": false,
+                  "key": "modified_since_time",
+                  "value": "<dateTime>",
+                  "description": "Filter by modification timestamp"
+                },
+                {
+                  "disabled": false,
+                  "key": "regulator_batch_id",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "harvest_id",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "0d516f0a-aaa7-46e8-9e83-7df73094bcb7",
+              "name": "Successful response with list of samples",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "samples"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "0"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "status_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "client_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "modified_since_time",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "regulator_batch_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "harvest_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": true,\n  \"samples\": [\n    {\n      \"lab_internal_id\": \"string\",\n      \"public_key\": \"string\",\n      \"name\": \"string\",\n      \"sample_type\": \"string\",\n      \"status_id\": 3138,\n      \"status_name\": \"string\",\n      \"date_created\": \"1963-05-28T15:29:59.013Z\",\n      \"last_modified\": \"1955-12-15T01:58:17.223Z\"\n    },\n    {\n      \"lab_internal_id\": \"string\",\n      \"public_key\": \"string\",\n      \"name\": \"string\",\n      \"sample_type\": \"string\",\n      \"status_id\": 4661,\n      \"status_name\": \"string\",\n      \"date_created\": \"2006-03-10T20:13:24.278Z\",\n      \"last_modified\": \"2014-05-22T17:48:53.006Z\"\n    }\n  ],\n  \"more_results\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e6836a41-973b-4e31-a14e-ded25f25923a",
+              "name": "Invalid request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "samples"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "0"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "status_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "client_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "modified_since_time",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "regulator_batch_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "harvest_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "93076282-174e-4b1c-b3f6-31cb9788c4ed",
+              "name": "Authentication failed",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "samples"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "0"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "status_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "client_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "modified_since_time",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "regulator_batch_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "harvest_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "bf6c9cb4-889c-446d-9a1b-63888d4ce60f",
+              "name": "Access denied",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v0",
+                    "labs",
+                    "samples"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "start",
+                      "value": "0"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "100"
+                    },
+                    {
+                      "key": "status_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "client_id",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "modified_since_time",
+                      "value": "<dateTime>"
+                    },
+                    {
+                      "key": "regulator_batch_id",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "harvest_id",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "X-ConfidentCannabis-APIKey",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"success\": false,\n  \"error_code\": \"string\",\n  \"error_message\": \"string\",\n  \"error_details\": {}\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.confidentcannabis.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "X-ConfidentCannabis-APIKey"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a5f35aaa-c38c-4915-8792-0723d3467fad",
+    "name": "Clients Client Info Samples API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "API endpoints for clients to view their orders, samples, and associated labs. All endpoints are read-only (GET) and accessible only with client API credentials.\n\nContact Support:\n Name: Confident Cannabis API Support",
+      "type": "text/plain"
+    }
+  }
+}

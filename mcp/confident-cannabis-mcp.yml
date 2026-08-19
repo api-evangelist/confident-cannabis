@@ -229,3 +229,9 @@ tools:
   source_operation: openapi/confident-cannabis-lab-openapi.json#verifyOrder
   method: POST
   path: /v0/labs/order/{order_id}/status/verify
+deployment:
+  mode: none
+  verified: derived
+  tools: 44
+  checked: '2026-08-12'
+  source: catalog MCP census
