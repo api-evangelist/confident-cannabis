@@ -31,7 +31,7 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 image: https://cdn.prod.website-files.com/64d6509bb299ffdf28c03cc4/65005f8fc24b671e1c5f5e68_webclip.jpg
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-18'
 tags:
