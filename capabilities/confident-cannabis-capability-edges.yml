@@ -1,0 +1,44 @@
+slug: confident-cannabis
+provider: Confident Cannabis
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Pharmaceuticals & Life Sciences
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 3
+edges:
+- tag: Test Results
+  spec_file: confident-cannabis-test-results-api-openapi.yml
+  capability_id: BC-1560.20
+  capability_id_l1: BC-1560
+  capability_name: GxP Quality Control Management
+  confidence: 0.8
+  evidence: POST /v0/labs/sample/{sample_id}/test_results  submitTestResults  Submit test results
+  reason: Submission of analytical test results for lab samples is squarely QC laboratory analytical testing,
+    the core of a LIMS.
+- tag: Sample Files
+  spec_file: confident-cannabis-sample-files-api-openapi.yml
+  capability_id: BC-1560.20
+  capability_id_l1: BC-1560
+  capability_name: GxP Quality Control Management
+  confidence: 0.7
+  evidence: POST /v0/labs/sample/{sample_id}/coa  uploadSampleCOA  Upload Certificate of Analysis
+  reason: Uploading Certificates of Analysis for analytical lab samples is quality-control lab documentation.
+    The vendor is a LIMS for analytical testing labs, so QC lab testing (BC-1560.20) is the closest honest
+    fit, though it is file upload of an artefact rather than the full capability.
+- tag: Samples
+  spec_file: confident-cannabis-samples-api-openapi.yml
+  capability_id: BC-1560.20
+  capability_id_l1: BC-1560
+  capability_name: GxP Quality Control Management
+  confidence: 0.7
+  evidence: GET /v0/labs/sample/{sample_id}  getSampleDetails  Get sample details; POST /v0/labs/sample/{sample_id}/weight_on_hand  adjustWeightOnHand
+  reason: Operations manage analytical testing lab samples (details, edits, weight on hand) within a Laboratory
+    Information Management System — QC lab sample management. Alternative reading is compound/sample repository
+    management (BC-1500.60), so some ambiguity remains.

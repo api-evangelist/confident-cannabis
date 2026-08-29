@@ -164,6 +164,9 @@ apis:
   - type: OpenAPI
     url: openapi/confident-cannabis-test-results-api-openapi.yml
 common:
+- type: CapabilityMap
+  url: capabilities/confident-cannabis-capability-edges.yml
+  name: Confident Cannabis Business Capability Map
 - type: Overlay
   url: overlays/confident-cannabis-client-overlay.yaml
 - type: Website
