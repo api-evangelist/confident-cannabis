@@ -1,32 +1,46 @@
 {
   "provider": "confident-cannabis",
   "sources": [
-    "confident-cannabis-client-info-api-openapi.yml",
-    "confident-cannabis-clients-api-openapi.yml",
-    "confident-cannabis-lab-info-api-openapi.yml",
-    "confident-cannabis-labs-api-openapi.yml",
-    "confident-cannabis-order-status-api-openapi.yml",
-    "confident-cannabis-orders-api-openapi.yml",
-    "confident-cannabis-reference-data-api-openapi.yml",
-    "confident-cannabis-sample-files-api-openapi.yml",
-    "confident-cannabis-samples-api-openapi.yml",
-    "confident-cannabis-test-results-api-openapi.yml"
+    "_original/confident-cannabis-client-openapi.json",
+    "_original/confident-cannabis-common-openapi.json",
+    "_original/confident-cannabis-lab-openapi.json"
   ],
   "outputs": [
     "confident-cannabis-client-info-api-openapi.yml",
-    "confident-cannabis-clients-api-openapi.yml",
-    "confident-cannabis-lab-info-api-openapi.yml",
     "confident-cannabis-labs-api-openapi.yml",
-    "confident-cannabis-order-status-api-openapi.yml",
     "confident-cannabis-orders-api-openapi.yml",
     "confident-cannabis-reference-data-api-openapi.yml",
-    "confident-cannabis-sample-files-api-openapi.yml",
     "confident-cannabis-samples-api-openapi.yml",
+    "confident-cannabis-clients-api-openapi.yml",
+    "confident-cannabis-lab-info-api-openapi.yml",
+    "confident-cannabis-order-status-api-openapi.yml",
+    "confident-cannabis-sample-files-api-openapi.yml",
     "confident-cannabis-test-results-api-openapi.yml"
   ],
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (3 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "confident-cannabis-client-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "confident-cannabis-common-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "confident-cannabis-lab-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "confident-cannabis-lab-openapi.json: declared missing tag: Lab Info",
+    "tag 'Orders' spans 2 source specs (confident-cannabis-client-openapi.json, confident-cannabis-lab-openapi.json): per-path servers applied",
+    "tag 'Reference Data' spans 3 source specs (confident-cannabis-client-openapi.json, confident-cannabis-common-openapi.json, confident-cannabis-lab-openapi.json): per-path servers applied",
+    "tag 'Samples' spans 2 source specs (confident-cannabis-client-openapi.json, confident-cannabis-lab-openapi.json): per-path servers applied",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "confident-cannabis-client-info-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "confident-cannabis-clients-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "confident-cannabis-lab-info-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "confident-cannabis-labs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "confident-cannabis-order-status-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "confident-cannabis-orders-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "confident-cannabis-reference-data-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "confident-cannabis-sample-files-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "confident-cannabis-samples-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "confident-cannabis-test-results-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
