@@ -2,7 +2,7 @@
 name: Retrieve test orders and results as a Confident Cannabis client
 description: As a testing client, list your labs and orders, page through samples, and pull detailed sample results including a Certificate of Analysis.
 api: openapi/confident-cannabis-client-openapi.json
-operations: [getClient, getLabs, getOrders, getSamples, getSampleDetails]
+operations: [getClient, getLabs, getV0LabsOrders, getV0LabsSamples, getV0LabsSampleBySampleId]
 ---
 
 # Retrieve orders and results (client)
