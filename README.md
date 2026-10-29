@@ -64,6 +64,134 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Confident Cannabis is a company surfaced as a portfolio company of bullpen-capital and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Confident Cannabis (CC Software LLC, operating as Confident LIMS) is a cloud-based Laboratory Information Management System for analytical testing labs and their clients across cannabis and hemp, food and beverage, environmental, agriculture, nutraceuticals, cosmetics, oil and gas, and industrial chemical testing. Its public v0 REST API lets labs manage samples, orders, and the order-status lifecycle, submit per-compound test results, and upload Certificates of Analysis, while testing clients read their labs, orders, samples, and results. Authentication is API-key based with optional HMAC-SHA256 request signing. Founded 2015 and backed by Bullpen Capital, the platform serves 100+ labs and 15,000+ active testing clients.
 
-Backed by: bullpen-capital — https://confidentcannabis.com
+**Areas:** Company · Cannabis · Laboratory · LIMS · Testing · Compliance · Certificate of Analysis · Life Sciences
+
+## Confident Cannabis on APIs.io
+
+Everything profiled for Confident Cannabis is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/confident-cannabis/](https://apis.io/providers/confident-cannabis/)** — or go straight to one of the APIs or properties below.
+
+### APIs (10)
+
+- [Confident Cannabis Client Info API](https://apis.io/apis/confident-cannabis/confident-cannabis-client-info-api/) — Client organization information
+- [Confident Cannabis Clients API](https://apis.io/apis/confident-cannabis/confident-cannabis-clients-api/) — Client relationship management
+- [Confident Cannabis Lab Info API](https://apis.io/apis/confident-cannabis/confident-cannabis-lab-info-api/) — The Lab Info API from Confident Cannabis — 1 operation(s) for lab info.
+- [Confident Cannabis Labs API](https://apis.io/apis/confident-cannabis/confident-cannabis-labs-api/) — View associated labs
+- [Confident Cannabis Order Status API](https://apis.io/apis/confident-cannabis/confident-cannabis-order-status-api/) — Order lifecycle state transitions
+- [Confident Cannabis Orders API](https://apis.io/apis/confident-cannabis/confident-cannabis-orders-api/) — View orders and order details
+- [Confident Cannabis Reference Data API](https://apis.io/apis/confident-cannabis/confident-cannabis-reference-data-api/) — Reference data for sample metadata
+- [Confident Cannabis Sample Files API](https://apis.io/apis/confident-cannabis/confident-cannabis-sample-files-api/) — Upload sample images and documents
+- [Confident Cannabis Samples API](https://apis.io/apis/confident-cannabis/confident-cannabis-samples-api/) — View samples and test results
+- [Confident Cannabis Test Results API](https://apis.io/apis/confident-cannabis/confident-cannabis-test-results-api/) — Submit and manage test results
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [confident-cannabis](https://apis.io/servers/confident-cannabis/confident-cannabis/)
+
+#### Collections (10)
+
+Postman and Open Collection request collections.
+
+- [Clients Client Info API](https://apis.io/collections/confident-cannabis/open-confident-cannabis-client-info-api/)
+- [Client Info Clients API](https://apis.io/collections/confident-cannabis/open-confident-cannabis-clients-api/)
+- [Clients Client Info Lab Info API](https://apis.io/collections/confident-cannabis/open-confident-cannabis-lab-info-api/)
+- [Clients Client Info Labs API](https://apis.io/collections/confident-cannabis/open-confident-cannabis-labs-api/)
+- [Clients Client Info Order Status API](https://apis.io/collections/confident-cannabis/open-confident-cannabis-order-status-api/)
+- [Clients Client Info Orders API](https://apis.io/collections/confident-cannabis/open-confident-cannabis-orders-api/)
+- [Clients Client Info Reference Data API](https://apis.io/collections/confident-cannabis/open-confident-cannabis-reference-data-api/)
+- [Clients Client Info Sample Files API](https://apis.io/collections/confident-cannabis/open-confident-cannabis-sample-files-api/)
+- [Clients Client Info Samples API](https://apis.io/collections/confident-cannabis/open-confident-cannabis-samples-api/)
+- [Clients Client Info Test Results API](https://apis.io/collections/confident-cannabis/open-confident-cannabis-test-results-api/)
+
+#### Overlays (3)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Confident Cannabis Client Overlay](https://apis.io/overlays/confident-cannabis/confident-cannabis-client-overlay/)
+- [Confident Cannabis Common Overlay](https://apis.io/overlays/confident-cannabis/confident-cannabis-common-overlay/)
+- [Confident Cannabis Lab Overlay](https://apis.io/overlays/confident-cannabis/confident-cannabis-lab-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Confident Cannabis Authentication](https://apis.io/security/confident-cannabis/confident-cannabis-authentication/)
+- [Confident Cannabis Domain Security](https://apis.io/security/confident-cannabis/confident-cannabis-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.confidentlims.com)
+- [Documentation](https://confidentlims.readme.io/)
+- [API reference](https://confidentlims.readme.io/reference)
+- [Pricing](https://www.confidentlims.com/pricing)
+- [Sign up](https://accounts.confidentlims.com/register)
+- [Support](https://help.confidentlims.com/)
+- [Blog](https://www.confidentlims.com/blog)
+- [Compliance](https://www.confidentlims.com/ai-info)
+- [Terms of service](https://www.confidentlims.com/terms-of-use)
+- [Privacy policy](https://www.confidentlims.com/privacy)
+- [GitHub](https://github.com/ConfidentCannabis)
+
+## API Evangelist rating
+
+**Kin Score 40.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 78.6 |
+| Contract quality | 53.9 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 33.9 |
+| Access clarity | 46.1 |
+
+**Agent readiness 23.3** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | documented (partial credit) |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | verified |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | — |
+
+**Regulatory alignment 23.4** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/confident-cannabis/](https://apis.io/providers/confident-cannabis/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Confident Cannabis: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/confident-cannabis/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
